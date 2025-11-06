@@ -1,6 +1,4 @@
 <script>
-  import Counter from './lib/Counter.svelte'
-  
   import { onMount } from "svelte";
   import { getGreeting } from "./lib/api.js";
 
