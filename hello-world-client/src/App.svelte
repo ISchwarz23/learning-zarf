@@ -18,4 +18,14 @@
 
 <main>
   <h1>{greeting}</h1>
+
+  <p class="hint">
+  
+  </p>
 </main>
+
+<style>
+  .hint {
+    color: #888;
+  }
+</style>
