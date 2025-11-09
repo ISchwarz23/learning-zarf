@@ -1,5 +1,5 @@
-VERSION_FRONTEND = 0.1.0
-VERSION_BACKEND = 0.1.0
+VERSION_FRONTEND = 1.0.0
+VERSION_BACKEND = 1.0.0
 
 frontend-container:
 	@sudo docker build -t hello-world-frontend:$(VERSION_FRONTEND) hello-world-frontend
