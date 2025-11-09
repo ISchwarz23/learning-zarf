@@ -3,7 +3,14 @@
 The purpose of this repo was to gain experience with zarf. For that purpose I created an example hello world app which consists of a backend which provides a greeting and a frontend which displays that greeting.  
 The version 1.0.0 of this app has a hardcoded greeting. In version 1.1.0 the greeting can be configured in the backend.  
 
-## Setup Cluster for air-gapped deployment
+## What is zarf?
+<img align="right" alt="zarf logo" src="https://raw.githubusercontent.com/zarf-dev/zarf/main/site/src/assets/zarf-logo.png"  height="256" />
+
+Zarf eliminates the [complexity of airgap software delivery](https://www.itopstimes.com/contain/air-gap-kubernetes-considerations-for-running-cloud-native-applications-without-the-cloud/) for Kubernetes clusters and cloud-native workloads using a declarative packaging strategy to support DevSecOps in offline and semi-connected environments.
+
+## Instructions
+
+### Setup Cluster for air-gapped deployment
 I used minicube for my tests. I did set up minikube "cluster" using the following command:
 ```shell
 minikube start --cpus 4 --memory 8192
@@ -15,27 +22,27 @@ zarf init
 ```
 I did skip the k3s installation, but installed the registry and git-repo.
 
-## Building zarf package
+### Building zarf package
 To build a zarf package use the Makefile:
 ```shell
 make package
 ```
 This will create a `zarf-package-hello-world-app-amd64-<version>.tar.zst` in the project root.
 
-## Deploy zarf package
+### Deploy zarf package
 To deploy the zarf package to the prepared cluster run the following command:
 ```shell
 zarf package deploy zarf-package-hello-world-app-amd64-*.tar.zst --set ENVIRONMENT_VAR_INGRESS_HOST=<your-ingress-host-name>
 ```
 The ingress host name is required, as the hello world app wants to register routes to the ingress.
 
-## Remove zarf package
+### Remove zarf package
 To remove the package again run:
 ```shell
 zarf package remove zarf-package-hello-world-app-amd64-*.tar.zst
 ```
 
-## Inspecting a package
+### Inspecting a package
 To get the definition of the zarf package run
 ```shell
 zarf package inspect definition zarf-package-hello-world-app-amd64-*.tar.zst
