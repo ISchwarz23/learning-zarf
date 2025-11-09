@@ -22,8 +22,6 @@ jobs:
 
       - name: Install Zarf
         uses: zarf-dev/setup-zarf@main
-        with:
-          version: v0.32.2 # remove to use latest
 
       - name: Create Zarf package
         run: make package
