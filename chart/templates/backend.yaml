@@ -20,9 +20,6 @@ spec:
           imagePullPolicy: {{ .Values.backend.image.pullPolicy }}
           ports:
             - containerPort: {{ .Values.backend.service.port }}
-          env:
-            - name: GREETING
-              value: "{{ .Values.backend.greeting }}"
 
 ---
 

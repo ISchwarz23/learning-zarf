@@ -18,6 +18,3 @@ components:
           - name: CUSTOM_VAR_GREETING
             description: "The message shown to the user."
             path: backend.greeting
-          - name: ENVIRONMENT_VAR_INGRESS_HOST
-            description: "The host of the ingress."
-            path: ingress.host

@@ -13,11 +13,7 @@ type GreetingResponse struct {
 }
 
 func main() {
-	// Read greeting from environment variable or use default
-	greeting := os.Getenv("GREETING")
-	if greeting == "" {
-		greeting = "Hello, World!"
-	}
+	greeting := "Hello, World!"
 
 	http.HandleFunc("/api/greeting", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
