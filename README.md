@@ -51,6 +51,6 @@ To extract the SBOM call
 zarf package inspect sbom zarf-package-hello-world-app-amd64-*.tar.zst
 ```
 
-## This to investigate
+## Things to investigate
 - signing of zarf packages
 - overwrite image versions in zarf definition and helm charts during build
