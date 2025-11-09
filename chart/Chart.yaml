@@ -3,7 +3,7 @@ name: hello-world-app
 description: A Helm chart for deploying Hello World App consisting of a frontend and a backend.
 type: application
 version: "1.0.0"
-appVersion: "0.1.0"
+appVersion: "1.0.0"
 keywords:
   - hello-world
   - frontend
