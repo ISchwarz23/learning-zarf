@@ -6,7 +6,8 @@ The version 1.0.0 of this app has a hardcoded greeting. In version 1.1.0 the gre
 ## What is zarf?
 <img align="right" alt="zarf logo" src="https://raw.githubusercontent.com/zarf-dev/zarf/main/site/src/assets/zarf-logo.png"  height="256" />
 
-Zarf eliminates the [complexity of airgap software delivery](https://www.itopstimes.com/contain/air-gap-kubernetes-considerations-for-running-cloud-native-applications-without-the-cloud/) for Kubernetes clusters and cloud-native workloads using a declarative packaging strategy to support DevSecOps in offline and semi-connected environments.
+[Zarf](https://www.zarf.dev) claims to eliminates the [complexity of airgap software delivery](https://www.itopstimes.com/contain/air-gap-kubernetes-considerations-for-running-cloud-native-applications-without-the-cloud/) for Kubernetes clusters and cloud-native workloads using a declarative packaging strategy to support DevSecOps in offline and semi-connected environments.  
+It is a free open source tool that enables continuous software delivery on systems that are disconnected from the internet.
 
 ## Instructions
 
