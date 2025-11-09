@@ -52,9 +52,13 @@ jobs:
       - name: Create GitHub release
         id: create_release
         uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_RELEASE_SECRET }}
         with:
           tag_name: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }}
           draft: false
           prerelease: false
           files: "./zarf-packages/*"
+          body: |
+            Release created automatically by GitHub Actions.
