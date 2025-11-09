@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: zarf-packages
-          path: *.tar.zst
+          path: "*.tar.zst"
 
   release:
     runs-on: ubuntu-latest
