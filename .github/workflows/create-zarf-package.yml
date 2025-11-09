@@ -40,6 +40,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
 
       - name: Download Zarf package artifacts from build
         uses: actions/download-artifact@v4
@@ -55,13 +57,6 @@ jobs:
           name: Release ${{ github.ref_name }}
           draft: false
           prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload Zarf packages to release
-        run: |
-          for f in ./zarf-packages/*.tar.zst; do
-            gh release upload ${{ github.ref_name }} "$f" --repo ${{ github.repository }} --clobber
-          done
+          files: "./zarf-packages/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
