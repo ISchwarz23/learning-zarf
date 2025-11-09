@@ -1,6 +1,5 @@
 VERSION_FRONTEND = 0.1.0
 VERSION_BACKEND = 0.1.0
-VERSION_PACKAGE = 0.1.0
 
 frontend-container:
 	@sudo docker build -t hello-world-frontend:$(VERSION_FRONTEND) hello-world-frontend
@@ -16,3 +15,5 @@ backend-run: backend-container
 	
 containers: frontend-container backend-container
 
+package: containers
+	zarf package create . --confirm

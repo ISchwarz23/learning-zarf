@@ -1,0 +1,12 @@
+apiVersion: v2
+name: hello-world-app
+description: A Helm chart for deploying Hello World App consisting of a frontend and a backend.
+type: application
+version: "1.0.0"
+appVersion: "0.1.0"
+keywords:
+  - hello-world
+  - frontend
+  - backend
+  - demo
+icon: https://brand.airbus.com/themes/custom/airbus_web_experience_ui/favicons/corporate/apple-touch-icon.png

@@ -1,0 +1,27 @@
+replicaCount: 1
+
+backend:
+  image:
+    repository: hello-world-backend
+    tag: 0.1.0
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 8080
+  greeting: "Hello World"
+
+frontend:
+  image:
+    repository: hello-world-frontend
+    tag: 0.1.0
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 80
+
+ingress:
+  enabled: true
+  host: "127.0.0.1"
+  className: ""
+  annotations: {}
+  tls: []

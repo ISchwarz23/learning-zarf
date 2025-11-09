@@ -1,0 +1,23 @@
+kind: ZarfPackageConfig
+metadata:
+  name: hello-world-app
+  description: "Deploy hello-world app (backend with frontend)"
+  version: 0.1.0
+components:
+  - name: hello-world-app
+    required: true
+    images:
+      - hello-world-frontend:0.1.0
+      - hello-world-backend:0.1.0
+    charts:
+      - name: hello-world-app
+        version: 0.1.0
+        localPath: chart
+        namespace: hello-world
+        variables:
+          - name: CUSTOM_VAR_GREETING
+            description: "The message shown to the user."
+            path: backend.greeting
+          - name: ENVIRONMENT_VAR_INGRESS_HOST
+            description: "The host of the ingress."
+            path: ingress.host
