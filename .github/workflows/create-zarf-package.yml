@@ -25,7 +25,7 @@ jobs:
 
       - name: save secret to file
         run: | 
-          echo $SIGNING_KEY > software-factory.key
+          echo "$SIGNING_KEY" > software-factory.key
         env:
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
 
