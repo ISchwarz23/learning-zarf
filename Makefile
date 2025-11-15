@@ -16,4 +16,4 @@ backend-run: backend-container
 containers: frontend-container backend-container
 
 package: containers
-	zarf package create . --confirm
+	zarf package create . --confirm --signing-key software-factory.key

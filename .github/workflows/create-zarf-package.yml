@@ -23,6 +23,12 @@ jobs:
       - name: Install Zarf
         uses: zarf-dev/setup-zarf@main
 
+      - name: save secret to file
+        run: | 
+          echo $SIGNING_KEY > software-factory.key
+        env:
+          SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
+
       - name: Create Zarf package
         run: make package
 
